@@ -20,6 +20,7 @@ class Hissi:
             self.up()
         while self.kerros > dest and self.kerros > self.alin_kerros:
             self.down()
+        # print(f'{self.kerros}')
 
 
 class Talo:
@@ -40,9 +41,14 @@ class Talo:
             input_dest = self.ylin
         print(f'Hissi {hissi_nro} on nyt kerroksessa {input_dest}')
 
+    def alarm(self):
+        for hissi in self.hissit:
+            hissi.move(self.alin)
+
 
 talo = Talo(1, 25, 3)
 talo.move_lift(66, 5)
 talo.move_lift(3, 927)
 for i in range(5):
     talo.move_lift(random.randint(1, 3), random.randint(1, 25))
+talo.alarm()
