@@ -1,7 +1,7 @@
 import requests
 city = input("Anna paikkakunnan nimi: ")
 url = 'https://api.openweathermap.org/data/2.5/weather'#?q='
-api_key = '%YOUR_API_KEY%'
+api_key = '%YOURAPIKEY%'
 params = {
     'q': city,
     'appid': api_key,
