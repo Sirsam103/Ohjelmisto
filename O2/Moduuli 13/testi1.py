@@ -17,10 +17,11 @@ def haelentokentat(maakoodi):
     kursori = yhteys.cursor()
     kursori.execute(sql, param_tuple)
     tulos = kursori.fetchall()
-    if kursori.rowcount > 0:
+    if tulos:
+        print(tulos)
+    '''if kursori.rowcount > 0:
         for x in tulos:
-            print(f'Lentokentän nimi on "{x[3]}" ja sen sijaintikunta on {x[9]}')#koordinaatit ovat: {x[4]}, {x[5]}')
+            print(x[1], x[3], x[10])#koordinaatit ovat: {x[4]}, {x[5]}')'''
 
 
 haelentokentat(input('Anna lentokentän ICAO koodi: '))
-
