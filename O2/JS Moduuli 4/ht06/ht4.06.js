@@ -1,4 +1,3 @@
-'use strict';
 const formElem = document.querySelector('#form');
 const hakuElem = document.querySelector('input[name=q]');
 console.log('--hakusana: ' + hakuElem);
